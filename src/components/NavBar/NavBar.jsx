@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 import styled from "styled-components";
 
@@ -26,14 +27,13 @@ const Ul = styled.ul`
   align-items: center;
 `;
 
-const Li = styled.li`
-  padding: 0.5rem 1rem;
+const StyledLink = styled(Link)`
+  ${(p) => p.active && "background-color: #111;"}
+  display: inline-block;
   border-radius: 0.5rem;
-
-  a {
-    color: white;
-    text-decoration: none;
-  }
+  padding: 0.5rem 1rem;
+  color: white;
+  text-decoration: none;
 
   &:hover {
     background-color: #111;
@@ -41,20 +41,34 @@ const Li = styled.li`
 `;
 
 function NavBar() {
+  const [activePage, setActivePage] = useState("home");
+
   return (
     <>
       <Wrapper>
         <Logo>Fake Store</Logo>
         <Ul>
-          <Li>
-            <Link to={"home"}>Home</Link>
-          </Li>
-          <Li>
-            <Link to={"shop"}>Shop</Link>
-          </Li>
-          <Li>
-            <Link to={"cart"}>Cart</Link>
-          </Li>
+          <StyledLink
+            active={activePage === "home"}
+            onClick={() => setActivePage("home")}
+            to={"home"}
+          >
+            Home
+          </StyledLink>
+          <StyledLink
+            active={activePage === "shop"}
+            onClick={() => setActivePage("shop")}
+            to={"shop"}
+          >
+            Shop
+          </StyledLink>
+          <StyledLink
+            active={activePage === "cart"}
+            onClick={() => setActivePage("cart")}
+            to={"cart"}
+          >
+            Cart
+          </StyledLink>
         </Ul>
       </Wrapper>
       <Outlet />
