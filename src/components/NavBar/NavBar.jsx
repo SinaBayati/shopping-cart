@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
@@ -42,20 +42,23 @@ const Li = styled.li`
 
 function NavBar() {
   return (
-    <Wrapper>
-      <Logo>Fake Store</Logo>
-      <Ul>
-        <Li>
-          <Link to={"home"}>Home</Link>
-        </Li>
-        <Li>
-          <Link to={"shop"}>Shop</Link>
-        </Li>
-        <Li>
-          <Link to={"cart"}>Cart</Link>
-        </Li>
-      </Ul>
-    </Wrapper>
+    <>
+      <Wrapper>
+        <Logo>Fake Store</Logo>
+        <Ul>
+          <Li>
+            <Link to={"home"}>Home</Link>
+          </Li>
+          <Li>
+            <Link to={"shop"}>Shop</Link>
+          </Li>
+          <Li>
+            <Link to={"cart"}>Cart</Link>
+          </Li>
+        </Ul>
+      </Wrapper>
+      <Outlet />
+    </>
   );
 }
 
