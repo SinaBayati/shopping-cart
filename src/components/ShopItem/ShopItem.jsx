@@ -74,6 +74,7 @@ function ShopItem({
   imgAlt,
   title = "Shop Item",
   onAdd,
+  price,
 }) {
   const [count, setCount] = useState(0);
 
@@ -94,6 +95,7 @@ function ShopItem({
     <Card>
       <img style={{}} src={imgSrc} alt={imgAlt} />
       <h3>{title}</h3>
+      <h4>{price}</h4>
       <ButtonsWrapper>
         <StyledButtonSmall onClick={handleDecrement}>-</StyledButtonSmall>
         <StyledInput

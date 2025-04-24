@@ -1,5 +1,7 @@
+import CartItem from "../CartItem/CartItem";
+
 function CartPage() {
-  return <h1>Cart page</h1>;
+  return <CartItem></CartItem>;
 }
 
 export default CartPage;
