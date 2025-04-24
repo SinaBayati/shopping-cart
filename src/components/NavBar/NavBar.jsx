@@ -46,7 +46,7 @@ function NavBar() {
   return (
     <>
       <Wrapper>
-        <Logo>Fake Store</Logo>
+        <Logo>WallCart</Logo>
         <Ul>
           <StyledLink
             active={activePage === "home"}
@@ -71,7 +71,7 @@ function NavBar() {
           </StyledLink>
         </Ul>
       </Wrapper>
-      <Outlet />
+      <Outlet context={{ setActivePage }} />
     </>
   );
 }
