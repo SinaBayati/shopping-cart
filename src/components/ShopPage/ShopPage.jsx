@@ -1,5 +1,7 @@
+import ShopItem from "../ShopItem/ShopItem";
+
 function ShopPage() {
-  return <h1>Shop page</h1>;
+  return <ShopItem />;
 }
 
 export default ShopPage;
