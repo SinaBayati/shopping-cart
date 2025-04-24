@@ -35,9 +35,7 @@ const StyledLink = styled(Link)`
   font-size: 1.3rem;
   transition: box-shadow 0.2s ease;
 
-  &:hover,
-  &:focus,
-  &:active {
+  &:hover {
     box-shadow: 0 0 10px white;
     cursor: pointer;
   }

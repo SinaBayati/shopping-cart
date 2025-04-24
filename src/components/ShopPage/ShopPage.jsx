@@ -8,7 +8,7 @@ const StyledH2 = styled.h2`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 4rem 0;
+  padding: 8rem 0 4rem;
 `;
 
 const GridWrapper = styled.div`

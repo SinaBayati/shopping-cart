@@ -4,7 +4,7 @@ const Wrapper = styled.div`
   padding: 2rem;
   border-radius: 0.5rem;
   background-color: black;
-  box-shadow: 0 0 5px white;
+  box-shadow: 0 0 10px black;
   color: white;
   font-size: 1.2rem;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
