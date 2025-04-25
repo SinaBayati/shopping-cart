@@ -61,8 +61,9 @@ const RemoveButton = styled(StyledButtonSmall)`
 `;
 
 function CartItem({
+  id,
   title = "Cart Item",
-  initialCount = 0,
+  count = 0,
   price = "???$",
   onIncrement,
   onDecrement,
@@ -76,19 +77,23 @@ function CartItem({
       <img src={imgSrc} alt={imgAlt} />
       <FlexWrapper>
         <h3>{title}</h3>
-        <h4>{price}</h4>
+        <h4>{price + "$"}</h4>
         <ButtonsWrapper>
-          <StyledButtonSmall onClick={onDecrement}>-</StyledButtonSmall>
+          <StyledButtonSmall onClick={() => onDecrement(id)}>
+            -
+          </StyledButtonSmall>
           <StyledInput
-            value={initialCount}
-            onChange={onCountChange}
+            value={count}
+            onChange={(e) => onCountChange({ id, value: e.target.value })}
             type="number"
             min={0}
           ></StyledInput>
-          <StyledButtonSmall onClick={onIncrement}>+</StyledButtonSmall>
+          <StyledButtonSmall onClick={() => onIncrement(id)}>
+            +
+          </StyledButtonSmall>
         </ButtonsWrapper>
       </FlexWrapper>
-      <RemoveButton onClick={onRemove}>Remove Item</RemoveButton>
+      <RemoveButton onClick={() => onRemove(id)}>Remove Item</RemoveButton>
     </Wrapper>
   );
 }

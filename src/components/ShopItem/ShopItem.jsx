@@ -86,7 +86,7 @@ function ShopItem({
     setCount(count + 1);
   }
 
-  function handleAddToCart(count) {
+  function handleAddToCart() {
     onAdd({ id, count });
     setCount(0);
   }
@@ -95,7 +95,7 @@ function ShopItem({
     <Card>
       <img style={{}} src={imgSrc} alt={imgAlt} />
       <h3>{title}</h3>
-      <h4>{price}</h4>
+      <h4>{price + "$"}</h4>
       <ButtonsWrapper>
         <StyledButtonSmall onClick={handleDecrement}>-</StyledButtonSmall>
         <StyledInput

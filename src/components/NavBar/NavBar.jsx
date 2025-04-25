@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 import styled from "styled-components";
+import useData from "../../useData";
 
 const Wrapper = styled.div`
   margin: 0;
@@ -42,6 +43,10 @@ const StyledLink = styled(Link)`
 
 function NavBar() {
   const [activePage, setActivePage] = useState("home");
+  const [cart, setCart] = useState([]);
+  const [data, error] = useData("https://fakestoreapi.com/products");
+
+  if (error) console.error(error);
 
   return (
     <>
@@ -71,7 +76,7 @@ function NavBar() {
           </StyledLink>
         </Ul>
       </Wrapper>
-      <Outlet context={{ setActivePage }} />
+      <Outlet context={{ setActivePage, data, cart, setCart }} />
     </>
   );
 }
