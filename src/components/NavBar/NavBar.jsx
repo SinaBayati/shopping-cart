@@ -41,6 +41,14 @@ const StyledLink = styled(Link)`
   }
 `;
 
+const CartCount = styled.span`
+  display: inline-block;
+  padding: 0.1rem 0.3rem;
+  border-radius: 50%;
+  background-color: white;
+  color: black;
+`;
+
 function NavBar() {
   const [activePage, setActivePage] = useState("home");
   const [cart, setCart] = useState([]);
@@ -72,7 +80,7 @@ function NavBar() {
             onClick={() => setActivePage("cart")}
             to={"cart"}
           >
-            Cart
+            Cart <CartCount>{cart.length}</CartCount>
           </StyledLink>
         </Ul>
       </Wrapper>
