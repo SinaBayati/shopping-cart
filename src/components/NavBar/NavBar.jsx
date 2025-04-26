@@ -64,7 +64,7 @@ function NavBar() {
           <StyledLink
             active={activePage === "home"}
             onClick={() => setActivePage("home")}
-            to={"home"}
+            to={"/"}
           >
             Home
           </StyledLink>

@@ -27,7 +27,7 @@ function ErrorElement() {
   return (
     <Wrapper>
       An error has occurred
-      <StyledLink to="/home">go back to homepage</StyledLink>
+      <StyledLink to="/">go back to homepage</StyledLink>
     </Wrapper>
   );
 }
