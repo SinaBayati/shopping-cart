@@ -1,7 +1,6 @@
 import { useOutletContext } from "react-router-dom";
 import CartItem from "../CartItem/CartItem";
 import styled from "styled-components";
-import { useState } from "react";
 
 const Wrapper = styled.div`
   background-color: #111;

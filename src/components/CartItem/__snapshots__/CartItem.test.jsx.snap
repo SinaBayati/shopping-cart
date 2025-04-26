@@ -1,0 +1,48 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`CartItem > renders CartItem correctly 1`] = `
+<div>
+  <div
+    class="sc-Qotzb gdaYHo"
+  >
+    <img
+      src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
+    />
+    <div
+      class="sc-fYsHOw hbMOVr"
+    >
+      <h3>
+        Cart Item
+      </h3>
+      <h4>
+        ???$$
+      </h4>
+      <div
+        class="sc-dIMoHT inWsHY"
+      >
+        <button
+          class="sc-fWnslK ilLYJC"
+        >
+          -
+        </button>
+        <input
+          class="sc-dKREkF fVVDmn"
+          min="0"
+          type="number"
+          value="0"
+        />
+        <button
+          class="sc-fWnslK ilLYJC"
+        >
+          +
+        </button>
+      </div>
+    </div>
+    <button
+      class="sc-fWnslK sc-iQQCXo ilLYJC eBkRtH"
+    >
+      Remove Item
+    </button>
+  </div>
+</div>
+`;

@@ -1,0 +1,44 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ShopItem > renders ShopItem correctly 1`] = `
+<div>
+  <div
+    class="sc-Qotzb eAWTLB"
+  >
+    <img
+      src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
+    />
+    <h3>
+      Shop Item
+    </h3>
+    <h4>
+      undefined$
+    </h4>
+    <div
+      class="sc-fWnslK ibSytI"
+    >
+      <button
+        class="sc-dKREkF ktEiQE"
+      >
+        -
+      </button>
+      <input
+        class="sc-fYsHOw hVZtra"
+        min="0"
+        type="number"
+        value="0"
+      />
+      <button
+        class="sc-dKREkF ktEiQE"
+      >
+        +
+      </button>
+    </div>
+    <button
+      class="sc-dIMoHT gXqSJZ"
+    >
+      Add to cart
+    </button>
+  </div>
+</div>
+`;

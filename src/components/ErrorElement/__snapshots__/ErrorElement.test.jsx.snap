@@ -1,0 +1,18 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ErrorElement > renders ErrorElement correctly 1`] = `
+<div>
+  <div
+    class="sc-Qotzb iIRrMf"
+  >
+    An error has occurred
+    <a
+      class="sc-fYsHOw jlChIF"
+      data-discover="true"
+      href="/"
+    >
+      go back to homepage
+    </a>
+  </div>
+</div>
+`;
